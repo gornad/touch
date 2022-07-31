@@ -1,0 +1,7 @@
+{
+  "name": "touch",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
