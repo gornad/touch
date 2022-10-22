@@ -7,6 +7,9 @@
   </ion-toolbar>
 </ion-header>
 
+<div #touchable>
+
+</div>
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
@@ -16,6 +19,17 @@
 
   <div id="container">
     <strong class="capitalize">{{ folder }}</strong>
+    <div>
+      <ion-button (ionFocus)="hapticsVibrate()">Vibrate 3 seconds</ion-button>
+      <ion-button (ionFocus)="hapticsImpactLight()">Impact Light</ion-button>
+      <ion-button (ionFocus)="hapticsImpactMedium()">Impact Medium</ion-button>
+      <ion-button (ionFocus)="hapticsImpactHeavy()">Impact Heavy</ion-button>
+      <ion-button (ionFocus)="hapticsSelectionStart()">Selection Start</ion-button>
+      <ion-button (ionFocus)="hapticsSelectionChanged()">Selection Changed</ion-button>
+      <ion-button (ionFocus)="hapticsSelectionEnd()">Selection End</ion-button>
+    </div>
     <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div [innerHtml]="coords"></div>
   </div>
+  
 </ion-content>
